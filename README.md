@@ -1,3 +1,5 @@
+[![Docker Deployment](https://github.com/infraform/react-marvel-api/actions/workflows/dockerx.yml/badge.svg)](https://github.com/infraform/react-marvel-api/actions/workflows/dockerx.yml) [![Deploy to AWS CloudFormation](https://github.com/infraform/react-marvel-api/actions/workflows/CloudFormation.yml/badge.svg)](https://github.com/infraform/react-marvel-api/actions/workflows/CloudFormation.yml)
+
 # Marvel API with React.js
 
 ## Description
