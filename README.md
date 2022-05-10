@@ -4,7 +4,7 @@
 
 ## Description
 
-Marvel Web Application built with React.js. This is a simple web application that displays the Marvel Comics database. The application is built with React.js.
+Marvel Application is a simple web application that displays the Marvel Comics database. The application is built with React.js and uses the Marvel API.
 
 ## Using GitHub Actions with CloudFormation
 
