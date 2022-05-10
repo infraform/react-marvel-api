@@ -1,7 +1,6 @@
 {
-    "searchbar.noResult": "Karakter bulunamadı.",
-    "searchbar.placeholder": "Karakter adı yazın",
-    "searchbar.label": "Karakter ara",
-    "character.name": "Karakter Adı"
-
+  "searchbar.noResult": "Karakter bulunamadı.",
+  "searchbar.placeholder": "Karakter adı yazın",
+  "searchbar.label": "Karakter ara",
+  "character.name": "Karakter Adı"
 }
