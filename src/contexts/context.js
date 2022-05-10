@@ -9,15 +9,15 @@ const CharacterProvider = ({ children }) => {
   const [data, setData] = useState({ res: [], total: 0 });
   const [loading, setLoading] = useState(false);
   const [offset, setOffset] = useState(0);
-  
-  const [isLang,setIsLang] = useState('tr')
+
+  const [isLang, setIsLang] = useState('tr')
 
   const [totalPage, setTotalPage] = useState([]);
   const hash = "0b3b8996d2019d3f5e64dfcc68f7e757";
 
   const navigate = useNavigate();
   const moreClick = (item) => {
-    navigate('/details/'+ item.id, {state: {item}});
+    navigate('/details/' + item.id, { state: { item } });
   }
   const changeLang = (item) => {
     setIsLang(item)
@@ -46,19 +46,17 @@ const CharacterProvider = ({ children }) => {
             setLoading(true);
 
             const response = await axios.get(
-              `https://gateway.marvel.com/v1/public/characters?limit=12&offset=${
-                offset * 12
+              `https://gateway.marvel.com/v1/public/characters?limit=12&offset=${offset * 12
               }&ts=1&apikey=75ff82aee4aef7e1bdb522eea36271d4&hash=${hash}`
             );
             setData({ res: response.data.data.results, total: response.data.data.total });
-            sessionStorage.setItem('characters', JSON.stringify({...getCards, [offset]: response.data.data.results}));
-            
+            sessionStorage.setItem('characters', JSON.stringify({ ...getCards, [offset]: response.data.data.results }));
+
             setLoading(false);
           }
         } else {
           const response = await axios.get(
-            `https://gateway.marvel.com/v1/public/characters?limit=12&offset=${
-              offset * 12
+            `https://gateway.marvel.com/v1/public/characters?limit=12&offset=${offset * 12
             }&ts=1&apikey=75ff82aee4aef7e1bdb522eea36271d4&hash=${hash}`
           );
           const data = response.data.data.results;
@@ -84,7 +82,7 @@ const CharacterProvider = ({ children }) => {
     getData();
   }, [offset]);
 
-  
+
 
   return (
     <CharacterContext.Provider
